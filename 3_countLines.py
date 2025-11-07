@@ -1,0 +1,5 @@
+fname=input("Enter file name : ")
+f1=open(fname,'r')
+context=f1.readlines()
+f1.close()
+print(len(context))
