@@ -1,5 +1,10 @@
-fname=input("Enter file name : ")
-f1=open(fname,'r')
-context=f1.readlines()
-f1.close()
-print(len(context))
+fname = input("enter filename:")
+try:
+    with open(fname, 'r') as f1:
+        lines = f1.readlines()
+        print(len(lines))
+
+except FileNotFoundError:
+    print("file not found")
+except Exception as e:
+    print("error:",e)
